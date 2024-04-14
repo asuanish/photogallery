@@ -2,14 +2,19 @@ html {
   background-color: black;
 }
 
-main{
-  clear:both;
+main {
+  clear: both;
+  background-color: white;
 }
 
 body {
   margin: 0 auto;
-  width: 90%;
+  width: 450px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 400px;
 }
 
 header {
@@ -23,6 +28,7 @@ h1 {
 
 h2 {
   font-size: 2em;
+  text-align: center;
 }
 
 p {
@@ -34,7 +40,6 @@ nav a {
 }
 
 nav li {
-  width: 375px;
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -57,58 +62,65 @@ footer {
 /*SELECTORS*/
 
 [href="#top"] {
-  position:fixed;
-  bottom:0px;
-  right:0px;
-  border-radius:10px 0 0px 0px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 10px 0 0px 0px;
 }
 
-#first {
-  background-color: white;
+#sImage {
+  height: 280px;
+}
+
+#lImage {
+  height: 620px;
 }
 
 #mainNav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: nowrap;
-  gap: 50px;
 }
 
-#contact {
+section#contact {
+  background-color: black;
   color: white;
 }
 
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  column-gap: 16px;
+  row-gap: 16px;
+}
 /*RESPONSIVE*/
 
-@media screen and (max-width: 485px) {
-
+@media screen and (min-width: 880px) {
   body {
     margin: 0 auto;
-    width: 40%;
+    width: 850px;
   }
-  
-  /* put pictures in grid with 1 columns */
-
-  
+  #gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-@media screen and (min-width: 486px) and (max-width: 880px) {
-
-  /* put pictures in grid with 2 columns */
+@media screen and (min-width: 1300px) {
   body {
     margin: 0 auto;
-    width: 10%;
+    width: 1300px;
   }
-  
-}
 
-@media screen and (min-width: 881px) and (max-width: 1300px) {
-
-  /* put pictures in grid with 3 columns */
-  body {
-    margin: 0 auto;
-    width: 50%;
+  #mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
   }
-  
+  #gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
