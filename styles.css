@@ -2,7 +2,13 @@ html {
   background-color: black;
 }
 
+main{
+  clear:both;
+}
+
 body {
+  margin: 0 auto;
+  width: 90%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,21 +33,82 @@ nav a {
   font-size: 1.5em;
 }
 
+nav li {
+  width: 375px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: auto;
+  list-style: none;
+}
+
+nav li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  margin: auto;
+}
+
 footer {
   color: white;
+  text-align: center;
 }
 
 /*SELECTORS*/
+
+[href="#top"] {
+  position:fixed;
+  bottom:0px;
+  right:0px;
+  border-radius:10px 0 0px 0px;
+}
 
 #first {
   background-color: white;
 }
 
-#horizontal-list {
-  display: block;
-  display: inline;
+#mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 50px;
 }
 
 #contact {
   color: white;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 485px) {
+
+  body {
+    margin: 0 auto;
+    width: 40%;
+  }
+  
+  /* put pictures in grid with 1 columns */
+
+  
+}
+
+@media screen and (min-width: 486px) and (max-width: 880px) {
+
+  /* put pictures in grid with 2 columns */
+  body {
+    margin: 0 auto;
+    width: 10%;
+  }
+  
+}
+
+@media screen and (min-width: 881px) and (max-width: 1300px) {
+
+  /* put pictures in grid with 3 columns */
+  body {
+    margin: 0 auto;
+    width: 50%;
+  }
+  
 }
