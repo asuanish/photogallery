@@ -86,9 +86,6 @@ footer {
   right: 0px;
   border-radius: 10px 0 0px 0px;
 }
-#container {
-  text-align: center;
-}
 
 #sImage {
   height: 280px;
@@ -98,7 +95,7 @@ footer {
   height: 620px;
 }
 
-div .container {
+.container {
   float: left;
   width: 420px;
   position: relative;
